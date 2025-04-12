@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application
+        android:name=".AndroidApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppBase"
+        tools:targetApi="31"
+        >
+
+        <!-- SENTRY CONFIG -->
+        <meta-data android:name="io.sentry.dsn" android:value="https://98cdcdadba4f9f3e6b55252eea4b8300@o4509138589581312.ingest.us.sentry.io/4509138592137216" />
+        <meta-data android:name="io.sentry.send-default-pii" android:value="true" />
+        <meta-data android:name="io.sentry.traces.user-interaction.enable" android:value="true" />
+        <meta-data android:name="io.sentry.attach-screenshot" android:value="true" />
+        <meta-data android:name="io.sentry.attach-view-hierarchy" android:value="true" />
+
+        <activity
+            android:name=".SegundaActividad"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppBase">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
